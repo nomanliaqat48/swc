@@ -1,0 +1,353 @@
+<form novalidate id="purchase-form" class="p-4 clearfix form-validation" >
+    <div class="row">
+        <div class="col-12">
+            <h4>Registration</h4>
+            <p>Please enter your details below to gain full access to the COVIDSafe&trade; Professional program.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-12">
+            <h5>Product Version</h5>
+            <p>Please select the version of COVIDSafe&trade; Professional that you wish to purchase.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 h-100">
+            <div class="card">
+                <div class="form-check form-check-inline">
+                    <input default checked class="form-check-input ml-4" type="radio" name="radio-program" id="radio-food-service" data-ms-membership="{{page.ms-food-service-id}}">
+                    <label class="form-check-label w-100 py-2 px-3" for="radio-food-service">Food Service</label>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 h-100">
+            <div class="card">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input ml-4" type="radio" name="radio-program" id="radio-food-retail" data-ms-membership="{{page.ms-food-retail-id}}">
+                    <label class="form-check-label w-100 py-2 px-3" for="radio-food-retail">Food Retail</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="firstname">First Name</label>
+            <input required type="text" class="form-control" id="form-firstname" aria-describedby="" placeholder="John">
+            <div class="invalid-feedback">Please provide a first name</div>
+        </div>
+        <div class="form-group col-6">
+            <label for="lastname">Last Name</label>
+            <input required type="text" class="form-control" id="form-lastname" aria-describedby="" placeholder="Smith">
+            <div class="invalid-feedback">Please provide a last name</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="email">Email address</label>
+            <input required type="email" class="form-control" id="form-email" aria-describedby="" placeholder="john@example.com">
+            <div class="invalid-feedback">Please provide a valid email address</div>
+        </div>
+        <div class="form-group col-6">
+            <label for="password">Password</label>
+            <input required type="password" minlength="8" class="form-control" id="form-password" placeholder="" >
+            <div class="invalid-feedback">Please provide a password with a minimum of 8 characters</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <hr />
+            <small class="form-text text-muted mb-3">Providing us with additional information about your business helps us tailor the program to your needs.</small>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="form-company">Company</label>
+            <input type="text" class="form-control" id="form-company" aria-describedby="" placeholder="ABC Inc">
+        </div>
+        <div class="form-group col-6">
+            <label for="form-role">Role</label>
+            <input type="text" class="form-control" id="form-role" aria-describedby="" placeholder="CEO">
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-6">
+        <label for="form-sector">Industry Sector</label>
+        <select name="form-sector" class="form-control" id="form-sector">
+          <option></option>
+          <option value="Hospitality">Hospitality</option>
+          <option value="Food Retail">Food Retail</option>
+          <option value="Food Processing">Food Processing</option>
+          <option value="Health & Community">Health & Community</option>
+          <option value="Transportation & Distribution">Transportation & Distribution</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group col-6">
+        <label for="form-subsector">Industry Subsector</label>
+        <select class="form-control" id="form-subsector" title="Please select an industry subsector." disabled>
+          <option></option>
+          <option style="display:none;" data-subsector="HOS">Cafe</option>
+          <option style="display:none;" data-subsector="HOS">Restaurant</option>
+          <option style="display:none;" data-subsector="HOS">Hotel / Motel</option>
+          <option style="display:none;" data-subsector="HOS">Bar / Club / Pub</option>
+          <option style="display:none;" data-subsector="HOS">Event / Conference Center</option>
+          <option style="display:none;" data-subsector="HOS">Caterer</option>
+          <option style="display:none;" data-subsector="HOS">Casino / Gaming Venue</option>
+
+          <option style="display:none;" data-subsector="RET">Market Stall</option>
+          <option style="display:none;" data-subsector="RET">Convenience Store</option>
+          <option style="display:none;" data-subsector="RET">Supermarket</option>
+          <option style="display:none;" data-subsector="RET">Grocer / Butcher / Deli / Baker</option>
+          <option style="display:none;" data-subsector="RET">Service Station</option>
+          <option style="display:none;" data-subsector="RET">Food Takeaway</option>
+
+          <option style="display:none;" data-subsector="FPR">Home Based Food Manufacturer</option>
+          <option style="display:none;" data-subsector="FPR">Small / Medium Scale Food Manufacturer</option>
+          <option style="display:none;" data-subsector="FPR">Large Scale Food Manufacturer</option>
+
+          <option style="display:none;" data-subsector="HLT">Child Care</option>
+          <option style="display:none;" data-subsector="HLT">Aged Care</option>
+          <option style="display:none;" data-subsector="HLT">School Canteen</option>
+          <option style="display:none;" data-subsector="HLT">Hospital / Medical</option>
+          <option style="display:none;" data-subsector="HLT">Community Group</option>
+
+          <option style="display:none;" data-subsector="TRA">Meal Delivery Service</option>
+          <option style="display:none;" data-subsector="TRA">Food Transport Service</option>
+          <option style="display:none;" data-subsector="TRA">Food Storage Service</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="form-group col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="form-agree" value="false" required>
+                <label class="form-check-label" for="form-agree">I agree to the Terms & Conditions</label>
+                <div class="invalid-feedback">Please agree to the Terms & Conditions to continue</div>
+            </div>
+
+        </div>
+    </div>
+
+    <button id="form-submit" type="submit" class="btn btn-md btn-primary float-right">
+        <i class="icon lock"></i>
+        Secure Registration
+    </button>
+    <div class="clear"></div>
+
+</form>
+
+<form id="hidden-form" data-ms-form="signup" style="display: none;" >
+    <input type="hidden" data-ms-member="password" id="actual-password" />
+    <input type="hidden" data-ms-member="email" id="actual-email" />
+    <input type="hidden" data-ms-member="first-name" id="actual-firstname" />
+    <input type="hidden" data-ms-member="last-name" id="actual-lastname" />
+    <input type="hidden" data-ms-member="company" id="actual-company" />
+    <input type="hidden" data-ms-member="role" id="actual-role" />
+    <input type="hidden" data-ms-member="industry-sector" id="actual-sector" />
+    <input type="hidden" data-ms-member="industry-subsector" id="actual-subsector" />
+    <button id="actual-submit" type="submit">Submit</button>
+</form>
+
+<script>
+
+    var city, region, country;
+
+    $.get("https://ipinfo.io?token=8d569c1240a97f", function(response) {
+        city = response.city;
+        region = response.region;
+        country = response.country;
+
+    });
+
+</script>
+
+<script>
+
+var programCode = "01";
+
+function SetDefaultMembership() {
+    var queryString = new URLSearchParams(window.location.search);
+    if (queryString.has("type") && queryString.get("type") == "food-retail") {
+        document.querySelector("#radio-food-retail").click();
+    }
+}
+
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+
+    SetDefaultMembership();
+
+    if (window.mixpanel && mixpanel.track)
+        mixpanel.track('visited_checkout', {'Brand': 'RSP', 'Site_Country': "{{page.country_code}}".toUpperCase()});
+
+    if (window.smartlook)
+        smartlook('track','visited_checkout', {'Brand': 'RSP', 'Site_Country': "{{page.country_code}}".toUpperCase()});
+
+    document.querySelector("#memberstack-checkout").addEventListener("click", function(e) {
+        if (e.target.tagName.toLowerCase() == "button") {
+
+            var productPrice = document.querySelector("[data-cy='amount']").textContent;
+            productPrice = parseFloat(productPrice.replace(/[^0-9.]/,""));
+
+            var trackData = {
+                product: "RSP" +programCode,
+                program: "RSP{{page.country_code}}".toUpperCase() +programCode,
+                coupon: document.querySelector("#msCouponId").value,
+                product_price: productPrice,
+                amount: document.querySelector("[data-cy='updatedPrice']").style.display == "none" ?
+                    productPrice :
+                    parseFloat(document.querySelector("[data-cy='updatedPrice']").textContent.replace(/[^0-9.]/,""))
+            };
+
+            try {
+                sessionStorage.setItem("moncel-purchase", JSON.stringify(trackData));
+                _cio.track("transaction_submit", trackData);
+                if (window.mixpanel) {
+                    mixpanel.track("transaction_submit", trackData);
+                    smartlook('track', 'transaction_submit', trackData);
+                }
+            } catch {
+
+            }
+
+        }
+    });
+
+    var form = document.querySelector('#purchase-form');
+    form.addEventListener('submit', function(e) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        document.querySelector("input[name='radio-program']:checked").click();
+
+        if (form.checkValidity()) {
+
+            var isFoodService = document.querySelector("input[name='radio-program']:checked").id == "radio-food-service";
+            programCode = isFoodService ? "01" : "02";
+
+            var formFields = form.querySelectorAll("[id|='form']");
+            var email = "";
+
+            for (var i = 0; i < formFields.length; i++) {
+
+                if (formFields[i].id == "form-email") {
+                    email = formFields[i].value;
+                }
+
+                var matchingField = document.querySelector("#" +formFields[i].id.replace("form", "actual"));
+                if (matchingField) {
+                    matchingField.value = formFields[i].value;
+                }
+            }
+
+            _cio.identify({
+                id: email,
+                email: email,
+                created_at: Math.floor(Date.now()/1000),
+                first_name: document.querySelector("#form-firstname").value,
+                last_name: document.querySelector("#form-lastname").value,
+                geo_city: city,
+                geo_region: region,
+                geo_country: country,
+                sector: document.querySelector("#form-sector").value,
+                subsector: document.querySelector("#form-subsector").value,
+                site_country: "{{page.country_code}}".toUpperCase(),
+                mixpanel_id: mixpanel && mixpanel.get_distinct_id ? mixpanel.get_distinct_id() : null
+            });
+
+            if (window.mixpanel) {
+                try {
+                    mixpanel.identify();
+                    mixpanel.people.set({
+                        "$email": email,
+                        "$first_name": document.querySelector("#form-firstname").value,
+                        "$last_name": document.querySelector("#form-lastname").value});
+                    mixpanel.track("registration_submit", {
+                        product: "RSP" +programCode,
+                        program: "RSP{{page.country_code}}".toUpperCase() +programCode
+                    });
+
+                    smartlook('track','registration_submit', {
+                        product: "RSP" +programCode,
+                        program: "RSP{{page.country_code}}".toUpperCase() +programCode
+                    });
+                } catch(error) {
+
+                }
+            }
+
+            _cio.track("registration_submit", {
+                product: "RSP" +programCode,
+                program: "RSP{{page.country_code}}".toUpperCase() +programCode
+            });
+
+            document.querySelector("#hidden-form button").click();
+
+        }
+        form.classList.add('was-validated');
+    });
+  }, false);
+})();
+
+
+
+
+  $('select[name=form-sector]').change(function () {
+    $("[data-subsector]").hide();
+
+    document.getElementById("form-subsector").disabled = false;
+
+    switch ($(this).val()) {
+        case "Hospitality":
+            $("[data-subsector=HOS]").show();
+            break;
+        case "Food Retail":
+            $("[data-subsector=RET]").show();
+            break;
+        case "Health & Community":
+            $("[data-subsector=HLT]").show();
+            break;
+        case "Food Processing":
+            $("[data-subsector=FPR]").show();
+            break;
+        case "Transportation & Distribution":
+            $("[data-subsector=TRA]").show();
+            break;
+        case "Other":
+            document.getElementById("form-subsector").disabled = true;
+            break;
+    }
+  });
+
+
+</script>

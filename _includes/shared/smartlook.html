@@ -1,0 +1,12 @@
+<script type='text/javascript'>
+
+  var testingUrl = window.location.href;
+  var smartId = testingUrl.indexOf('netlify') != -1 || testingUrl.indexOf('localhost') != -1 ? '{{ site.smartlook }}' : '{{ page.smartlook }}';
+
+  window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', smartId );
+</script>

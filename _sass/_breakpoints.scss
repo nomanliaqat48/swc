@@ -1,0 +1,249 @@
+
+// Extra large screen / wide desktop
+@include media-breakpoint-down(xl) {
+
+    header ul.navbar-nav a {
+        font-size:1.05rem;
+    }
+
+    #hero .skyline {
+        position: absolute;
+    }
+
+    .comparison.table tr.logo th div.image {
+        width: 13rem
+    }
+    .comparison.table tr.logo th div.image.icc {
+        height: 1.7rem;
+    }
+    .comparison.table tr.logo th div.image.swc {
+        height: 1.35rem;
+    }
+    .comparison.table tr.logo th div.image.cfs {
+        height: 2.4rem;
+    }
+
+}
+
+// Large screen / desktop
+@include media-breakpoint-down(lg) {
+    header a.navbar-brand .primary.logo {
+        width:11rem;
+    }
+    header ul.navbar-nav {
+        margin-top:0.1rem;
+    }
+    header ul.navbar-nav a.nav-link,
+    header .btn {
+        font-size:0.88rem;
+    }
+
+    #hero .cta {
+        text-align: left;
+    }
+
+    #hero .skyline {
+        position: absolute;
+    }
+    .comparison.table tr.logo th div.image {
+        width: 12rem
+    }
+    .comparison.table tr.logo th div.image.icc {
+        height: 1.6rem;
+    }
+    .comparison.table tr.logo th div.image.swc {
+        height: 1.2rem;
+    }
+    .comparison.table tr.logo th div.image.cfs {
+        height: 2.2rem;
+    }
+}
+
+// Medium screen / tablet
+@include media-breakpoint-down(md) {
+    html{
+        font-size: 97.5%;
+    }
+
+    header ul.navbar-nav {
+        margin-top:0.1rem;
+    }
+    header ul.navbar-nav a.nav-link,
+    header .btn {
+        font-size:0.79rem;
+    }
+
+
+
+    #hero .cta {
+        text-align: center;
+    }
+    #hero .skyline {
+        position: relative;
+    }
+
+    .comparison.table tr.logo th div.image {
+        width: 12rem
+    }
+    .comparison.table tr.logo th div.image.icc {
+        height: 1.3rem;
+    }
+    .comparison.table tr.logo th div.image.swc {
+        height: 1rem;
+    }
+    .comparison.table tr.logo th div.image.cfs {
+        height: 1.8rem;
+    }
+}
+
+// Small screen / phone
+@include media-breakpoint-down(sm) {
+
+    html{
+        font-size: 95%;
+    }
+    header a.navbar-brand .logo {
+        height: 2.5rem;
+        width: 13rem;
+    }
+
+    #hero .cta {
+        text-align: center;
+    }
+    #hero .skyline {
+        position: relative;
+    }
+    .section .title.row {
+        padding-top:2rem!important;
+        padding-bottom:2rem!important;
+    }
+    .comparison.table tr.logo th div.image {
+        width: 12rem
+    }
+    .comparison.table tr.logo th div.image.icc {
+        height: 1.35rem;
+    }
+    .comparison.table tr.logo th div.image.swc {
+        height: 1.1rem;
+    }
+    .comparison.table tr.logo th div.image.cfs {
+        height: 1.9rem;
+    }
+    // .comparison.table tr.courseadvisor-rating td div.star {
+    //     height: 1rem;
+    // }
+
+    #sidebar {
+        height: auto!important;
+        position: sticky!important;
+        top: 0;
+        z-index: 1020;
+    }
+}
+
+// Extra small screen / phone
+@include media-breakpoint-down(xs) {
+
+    html{
+        font-size: 92.5%;
+    }
+
+    header a.navbar-brand .logo {
+        height: 2rem;
+        width: 10rem;
+    }
+    header a#chat-now {
+        font-size: 0.9rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-right: 0;
+    }
+
+    header a#chat-now .icon {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+
+    #hero .cta {
+        text-align: center;
+    }
+
+
+
+    #hero .skyline {
+        position: relative;
+    }
+
+    .section h2.title {
+        font-size: 1.8rem;
+    }
+
+    .comparison.table tr.logo th div.image {
+        width: 12rem
+    }
+    .comparison.table tr.logo th div.image.icc {
+        height: 1.35rem;
+    }
+    .comparison.table tr.logo th div.image.swc {
+        height: 1.1rem;
+    }
+    .comparison.table tr.logo th div.image.cfs {
+        height: 1.9rem;
+    }
+    // .comparison.table tr.courseadvisor-rating td div.star {
+    //     height: 1rem;
+    // }
+    // .comparison.table tr.courseadvisor-rating td div.star {
+    //     height: 0.8rem;
+    // }
+    // .comparison.table .badge {
+    //     font-size: 0.7rem;
+    // }
+    #sidebar {
+        position: sticky!important;
+        top: 0;
+        z-index: 1020;
+    }
+
+}
+
+// Tiny devices (iphone 5)
+@media (max-width: 350px) {
+    html{
+        font-size: 90%;
+    }
+    header a.navbar-brand .logo {
+        height: 1.8rem;
+        width: 9rem;
+    }
+    header a#chat-now {
+        font-size: 0.7rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-right: 0;
+    }
+
+    header a#chat-now .icon {
+        width: 0.75rem;
+        height: 0.75rem;
+    }
+    #hero h1 {
+        font-size: 1.6rem;
+    }
+    #hero small,
+    #hero p {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    }
+    #hero a.btn-cta {
+        font-size: 1.1rem;
+    }
+    #sidebar {
+        position: sticky!important;
+        top: 0;
+        z-index: 1020;
+    }
+
+
+
+ }

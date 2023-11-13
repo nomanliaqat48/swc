@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="feature row align-items-center py-6">
+    <div class="col-12">
+      <h2 class="mb-5 text-center">Common questions</h2>
+    </div>
+    <div class="col-12 col-lg-8 offset-lg-2">
+
+      <div id="accordion">
+        {% for faq-short in site.data.faq-short %}
+        <div class="card mb-2">
+          <div class="card-header p-0" id="heading-{{forloop.index}}">
+            <h5 class="mb-0">
+              <a class="btn btn-link px-4 py-3" data-toggle="collapse" data-target="#collapse-{{forloop.index}}" aria-expanded="false" aria-controls="collapse-{{forloop.index}}">
+                <div class="w-75 d-inline-block">{{ faq-short.question }}</div>
+              </a>
+            </h5>
+          </div>
+          <div id="collapse-{{forloop.index}}" class="collapse" aria-labelledby="heading-{{forloop.index}}" data-parent="#accordion">
+            <div class="card-body" id="faq-short-long-answer-{{forloop.index}}">
+              {{ faq-short.long-answer }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>

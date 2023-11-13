@@ -1,0 +1,168 @@
+
+
+// Colors
+$primary: #45479D; // Violet
+$secondary: #141B4D; // Dark Blue
+$primary-alt: red; // Main Gradient
+$secondary-alt: #8BDDEE; // Sky Blue
+$cta: #EB6C00; // Rust Orange
+$bg: #F6FAFF; // Lights Blue
+
+$gradient-light: #4d4e99;
+$gradient-dark: #242674;
+
+@mixin gradient {
+  background: rgba($secondary,0.9);
+  background: -moz-linear-gradient(left,rgba($gradient-light,1) 51.13%,rgba($gradient-dark,100) 100%);
+  background: -webkit-gradient(left top,right top,color-stop(51.13%,rgba($gradient-light,1)),color-stop(100%,rgba($gradient-dark,100)));
+  background: -webkit-linear-gradient(left,rgba($gradient-light,1) 51.13%,rgba($gradient-dark,100) 100%);
+  background: -o-linear-gradient(left,rgba($gradient-light,1) 51.13%,rgba($gradient-dark,100) 100%);
+  background: -ms-linear-gradient(left,rgba($gradient-light,1) 51.13%,rgba($gradient-dark,100) 100%);
+  background: linear-gradient(90deg,rgba($gradient-light,1) 51.13%,rgba($gradient-dark,100) 100.49%);
+}
+
+@mixin gradient-alt {
+  background: rgba($secondary,0.9);
+  background: -moz-linear-gradient(left,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100%);
+  background: -webkit-gradient(left top,right top,color-stop(51.13%,rgba($gradient-dark,1)),color-stop(100%,rgba($gradient-light,100)));
+  background: -webkit-linear-gradient(left,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100%);
+  background: -o-linear-gradient(left,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100%);
+  background: -ms-linear-gradient(left,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100%);
+  background: linear-gradient(90deg,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100.49%);
+}
+
+@mixin gradient-linear {
+  background: rgba($secondary,0.9);
+  background: -moz-linear-gradient(180deg,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100%);
+  background: -webkit-linear-gradient(180deg,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100%);
+  background: -o-linear-gradient(180deg,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100%);
+  background: -ms-linear-gradient(180deg,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100%);
+  background: linear-gradient(180deg,rgba($gradient-dark,1) 51.13%,rgba($gradient-light,100) 100.49%);
+}
+
+
+// $rsp:#11566b;
+// $rsp-cyan: #11566b; // Can use either rsp or rsp-cyan for primary color
+// $rsp-red: #ca1022;
+$rsp-dark-cyan: #072f38;
+$rsp-light-cyan: #1e87a0;
+$rsp-light-gray: #cccccc; // Same as $gray-400
+$rsp-very-light-cyan: #f2f4f5;
+$rsp-very-light-gray: #e9ecef; // Same as $gray-200
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$white: #ffffff;
+$black: #000000;
+
+
+
+// Links
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: $white;
+$link-hover-decoration: underline;
+
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 10%;
+
+// SM Buttons
+$input-btn-padding-y-sm: 0.3rem;
+$input-btn-padding-x-sm: 0.6rem;
+$input-btn-font-size-sm: 0.8rem;
+$input-border-color: $gray-400;
+$form-feedback-valid-color: $gray-400;
+$form-feedback-invalid-color: $cta;
+
+// Additional $spacers
+$spacers: (
+    "6": 1rem * 4,
+    "7": 1rem * 5,
+    "8": 1rem * 6,
+    "9": 1rem * 7
+);
+
+// Body
+$body-bg: $white;
+$body-color: $white;
+
+//  Modal
+$modal-xl: 1140px;
+$modal-lg: 1010px;
+$modal-md: 500px;
+$modal-sm: 300px;
+
+// Hero
+$hero-bg: #f3f3f3;
+$hero-font: #444;
+
+// FAQ
+$faq-bg: #fff;
+$faq-font: #999;
+$faq-border: #ddd;
+
+// Legal
+$legal-bg: #fff;
+$legal-font: #999;
+$legal-border: #ddd;
+
+// HR
+$hr : lighten(#000, 85%);
+
+// Buttons
+$btn-border-radius:     0.2rem;
+$btn-border-radius-lg:  0.2rem;
+$btn-border-radius-sm:  0.2rem;
+$btn-font-weight: 400;
+$btn-padding-y:0.3rem;
+$btn-padding-x:0.9rem;
+
+// Tables
+$table-cell-padding: 0.75rem;
+$table-cell-padding-sm: 0.3rem;
+$table-cell-padding: 0.7rem;
+$table-cell-padding-sm: 0.2rem;
+
+// Dropdowns
+$dropdown-min-width: 15rem;
+$dropdown-padding-y: 0.5rem;
+$dropdown-spacer: 0.125rem;
+$dropdown-color: $white;
+$dropdown-bg: $rsp-dark-cyan;
+$dropdown-border-color: $rsp-dark-cyan;
+$dropdown-border-radius: 0;
+$dropdown-inner-border-radius: 0;
+$dropdown-divider-bg: none;
+$dropdown-box-shadow: none;
+$dropdown-link-color: $white;
+$dropdown-link-hover-color: $rsp-dark-cyan;
+$dropdown-link-hover-bg: $rsp-dark-cyan;
+$dropdown-item-padding-y: 0.25rem;
+$dropdown-item-padding-x: 1.5rem;
+
+// Jumbotron
+$jumbotron-padding: 1rem;
+$jumbotron-color: $rsp-dark-cyan;
+$jumbotron-bg: $gray-200;
+
+
+// Badges
+$badge-font-size:  0.7rem;
+$badge-font-weight: 400;
+$badge-padding-y: 0.4em;
+$badge-padding-x: 0.6em;
+$badge-border-radius: 2px;
+
+// Navbar
+$navbar-light-color:                $white;
+$navbar-light-hover-color:          $white;
+$navbar-light-active-color:         $white;
+$navbar-light-disabled-color:       lighten($primary,10%);
+$navbar-light-toggler-border-color: $white;

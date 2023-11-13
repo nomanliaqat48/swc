@@ -1,0 +1,59 @@
+<form id="contact-form" name="contact" method="post" data-netlify="true" class="card">
+
+    <input type="hidden" id="form-mclid" name="form-mclid" value="" />
+
+    <div class="card-body">
+
+        <h5 class="card-title">Complete the form below</h5>
+
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control col-sm-12" name="first_name" id="first_name" aria-describedby="first_name_info" placeholder="First Name">
+            <small id="first_name_info" class="form-text text-muted">Please enter your full name.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control col-sm-12" name="last_name" id="last_name" aria-describedby="last_name_info" placeholder="Last Name">
+            <small id="last_name_info" class="form-text text-muted">Please enter your last name.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control col-sm-12" name="email" id="email" aria-describedby="email_info" placeholder="Enter email">
+            <small id="email_info" class="form-text text-muted">Please enter your email address.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="phone" class="form-control col-sm-12" name="phone" id="phone" aria-describedby="phone_info" placeholder="Enter phone number">
+            <small id="phone_info" class="form-text text-muted">Please enter your phone number.</small>
+        </div>
+
+        <input class="btn btn-primary float-right" type="submit" value="Submit Form">
+
+    </div>
+
+</form>
+
+
+<script>
+    $('#contact-form').submit(function() {
+        mixpanel.track_forms('#contact-form', 'Contact Form');
+        // var $inputs = $('#contact-form :input');
+        // var values = {};
+        //
+        // $inputs.each(function() {
+        //     values[this.name] = $(this).val();
+        // });
+        //mixpanel.register(values);
+        //mixpanel.people.set(values);
+        var firstName = $('#first_name').val();
+        var lastName = $('#last_name').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+
+        mixpanelSet(firstName,lastName,email,phone);
+
+    });
+</script>

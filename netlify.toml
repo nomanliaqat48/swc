@@ -1,0 +1,29 @@
+[[redirects]]
+    from = "http://servewell.ca/*"
+    to = "https://servewell.ca/:splat"
+    force = true
+    status = 301
+
+[[redirects]]
+    from = "http://www.servewell.ca/*"
+    to = "https://www.servewell.ca/:splat"
+    force = true
+    status = 301
+
+[[redirects]]
+    from = "/assets/*"
+    to = "/assets/:splat"
+    force = true
+    status = 200
+
+[[redirects]]
+    from = "https://servewell.ca/*"
+    to = "/swc/:splat"
+    force = true
+    status = 200
+
+[[redirects]]
+    from = "https://www.servewell.ca/*"
+    to = "/swc/:splat"
+    force = true
+    status = 200

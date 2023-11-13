@@ -1,0 +1,21 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+    {% for faq-schema in site.data.faq-schema %}
+      {
+        "@type": "Question",
+        "name": "{{ faq-schema.question }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ faq-schema.long-answer }}"
+        }
+      }
+      {% if forloop.last == false %}
+        ,
+      {% endif %}
+    {% endfor %}
+    ]
+  }
+</script>

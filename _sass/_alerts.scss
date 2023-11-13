@@ -1,0 +1,46 @@
+#geo-alert p {
+    font-size: 0.95rem;
+    margin:0;
+}
+#geo-alert a.btn:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+#geo-alert a:hover,
+#geo-alert a.btn-link:hover {
+    text-decoration: underline;
+}
+#geo-alert a.btn-xs {
+}
+#stay-btn {
+  pointer: cursor;
+}
+
+.ms-style {
+  .ms-error-message {
+    bottom:auto !important;
+    background: $cta !important;
+    top: 0;
+    bottom: auto !important;
+    right: 0 !important;
+    left: 0 !important;
+    border-radius: 0 !important;
+    padding: 1.5em !important;
+  }
+}
+
+.badge {
+  padding: .4em .6em;
+  vertical-align: top;
+}
+
+.alert-danger {
+  color: white;
+  background-color: $cta;
+  border-color: white;
+  @media(max-width: 575px) {
+    .col-sm-6:last-child {
+        margin-top:1rem;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+
+    # Food Processing
+
+-   subsector_name: Home Based Food Manufacturer
+    subsector_code: FPRHOM
+    sector_code: FPR
+
+-   subsector_name: Large Scale Food Manufacturer
+    subsector_code: FPRLRG
+    sector_code: FPR
+
+-   subsector_name: Small / Medium Scale Food Manufacturer
+    subsector_code: FPRSML
+    sector_code: FPR
+
+    # Health & Community
+
+-   subsector_name: Aged Care
+    subsector_code: HLTAGE
+    sector_code: HLT
+
+-   subsector_name: Child Care
+    subsector_code: HLTCCR
+    sector_code: HLT
+
+-   subsector_name: Community Group
+    subsector_code: HLTCOM
+    sector_code: HLT
+
+-   subsector_name: Hospital / Medical
+    subsector_code: HLTHOS
+    sector_code: HLT
+
+-   subsector_name: School Canteen
+    subsector_code: HLTCAN
+    sector_code: HLT
+
+    # Hospitality
+
+-   subsector_name: Bar / Club / Pub
+    subsector_code: HOSBAR
+    sector_code: HOS
+
+-   subsector_name: Cafe
+    subsector_code: HOSCAF
+    sector_code: HOS
+
+-   subsector_name: Casino / Gaming Venue
+    subsector_code: HOSCAS
+    sector_code: HOS
+
+-   subsector_name: Catering Service
+    subsector_code: HOSCAT
+    sector_code: HOS
+
+-   subsector_name: Event / Conference Centre
+    subsector_code: HOSCON
+    sector_code: HOS
+
+-   subsector_name: Hotel / Motel
+    subsector_code: HOSHTL
+    sector_code: HOS
+
+-   subsector_name: Restaurant
+    subsector_code: HOSRES
+    sector_code: HOS
+
+    # Food Retail
+
+-   subsector_name: Convenience Store
+    subsector_code: RETCNV
+    sector_code: RET
+
+-   subsector_name: Grocer / Butcher / Deli / Baker
+    subsector_code: RETGRC
+    sector_code: RET
+
+-   subsector_name: Food Takeout / Delivery
+    subsector_code: RETTKW
+    sector_code: RET
+
+-   subsector_name: Market Stall
+    subsector_code: RETMKT
+    sector_code: RET
+
+-   subsector_name: Service Station
+    subsector_code: RETSST
+    sector_code: RET
+
+-   subsector_name: Supermarket
+    subsector_code: RETSUP
+    sector_code: RET
+
+    # Transport & Distribution
+
+-   subsector_name: Food Storage Service
+    subsector_code: TRASTR
+    sector_code: TRA
+
+-   subsector_name: Food Transport Service
+    subsector_code: TRATRS
+    sector_code: TRA
+
+-   subsector_name: Meal Delivery / Transport Service
+    subsector_code: TRADLS
+    sector_code: TRA

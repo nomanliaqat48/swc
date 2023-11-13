@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="20px" viewBox="0 0 28 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Stroke 1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="SW02---Course-COMP" transform="translate(-556.000000, -2723.000000)" stroke="#45479D" stroke-width="2">
+            <g id="Group-15" transform="translate(-85.000000, 2385.000000)">
+                <g id="Group-16" transform="translate(630.000000, 126.000000)">
+                    <g id="Group-12" transform="translate(0.000000, 107.000000)">
+                        <path d="M14.8888889,106 C13.2935,106 12,107.293523 12,108.88894 L12,120.568203 C12,122.16362 13.2935,123.457143 14.8888889,123.457143 L26.5679444,123.457143 C28.1633333,123.457143 29.4568333,122.16362 29.4568333,120.568203 L29.4568333,117.960212 L35.8976111,121.254326 C36.8588889,121.746168 38,121.048489 38,119.968748 L38,109.488395 C38,108.408654 36.8588889,107.710253 35.8976111,108.202095 L29.4568333,111.496931 L29.4568333,108.88894 C29.4568333,107.293523 28.1633333,106 26.5679444,106 L18.4985556,106" id="Stroke-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

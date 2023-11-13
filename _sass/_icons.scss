@@ -1,0 +1,281 @@
+i.app-icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-sizing:border-box;
+    cursor:pointer;
+    direction:ltr;
+    display:inline-block;
+    font-style:normal;
+    letter-spacing:normal;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    overflow-wrap:normal;
+    text-transform:none;
+    vertical-align:top;
+    white-space:nowrap;
+    margin-right: 0.5rem;
+
+}
+.app-icon.user {
+    background-image: url('../assets/swc/img/icons/app/user.svg');
+    overflow:hidden;
+    background-size:contain;
+    height:1.5rem;
+    width:1.5rem;
+}
+
+// App Navigation Iconsi
+i.app-nav {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    box-sizing:border-box;
+    direction:ltr;
+    display:inline-block;
+    font-style:normal;
+    letter-spacing:normal;
+    overflow-wrap:normal;
+    text-transform:none;
+    vertical-align:top;
+    white-space:nowrap;
+    width:2.5rem;
+    height:2.5rem;
+}
+i.app-nav.dashboard {
+    background-image: url('../assets/swc/img/icons/nav-dashboard.svg');
+}
+i.app-nav.dashboard-cyan {
+    background-image: url('../assets/swc/img/icons/nav-dashboard-cyan.svg');
+}
+i.app-nav.lesson {
+    background-image: url('../assets/swc/img/icons/nav-lesson.svg');
+}
+i.app-nav.lesson-cyan {
+    background-image: url('../assets/swc/img/icons/nav-lesson-cyan.svg');
+}
+i.app-nav.guide {
+    background-image: url('../assets/swc/img/icons/nav-guide.svg');
+}
+i.app-nav.guide-cyan {
+    background-image: url('../assets/swc/img/icons/nav-guide-cyan.svg');
+}
+i.app-nav.factsheet {
+    background-image: url('../assets/swc/img/icons/nav-factsheet.svg');
+}
+i.app-nav.factsheet-cyan {
+    background-image: url('../assets/swc/img/icons/nav-factsheet-cyan.svg');
+}
+i.app-nav.checklist {
+    background-image: url('../assets/swc/img/icons/nav-checklist.svg');
+}
+i.app-nav.checklist-cyan {
+    background-image: url('../assets/swc/img/icons/nav-checklist-cyan.svg');
+}
+i.app-nav.poster {
+    background-image: url('../assets/swc/img/icons/nav-poster.svg');
+}
+i.app-nav.poster-cyan {
+    background-image: url('../assets/swc/img/icons/nav-poster-cyan.svg');
+}
+i.app-nav.notification {
+    background-image: url('../assets/swc/img/icons/nav-notification.svg');
+}
+i.app-nav.notification-cyan {
+    background-image: url('../assets/swc/img/icons/nav-notification-cyan.svg');
+}
+i.app-nav.profile {
+    background-image: url('../assets/swc/img/icons/nav-profile.svg');
+}
+i.app-nav.logout {
+    background-image: url('../assets/swc/img/icons/nav-logout.svg');
+}
+
+
+
+
+
+
+
+// Button icons
+button i.icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing:border-box;
+    display: inline-block;
+    font-style:normal;
+    letter-spacing:normal;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    overflow-wrap:normal;
+    text-transform:none;
+    vertical-align:middle;
+    white-space:nowrap;
+    background-size:contain;
+    width: 1.0rem;
+    height: 1.0rem;
+    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+button i.icon.lock {
+    background-image: url('../assets/swc/img/icons/lock.svg');
+}
+
+
+
+
+
+
+
+
+
+// Credit Card icons
+i.card {
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing:border-box;
+    display: inline-block;
+    font-style:normal;
+    letter-spacing:normal;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    overflow-wrap:normal;
+    text-transform:none;
+    vertical-align:middle;
+    white-space:nowrap;
+    background-size:contain;
+    width: 3.0rem;
+    height: 2rem;
+    margin-right: 0.25rem;
+}
+i.card.visa {
+    background-image: url('../assets/swc/img/icons/card-visa-light.svg');
+}
+i.card.mastercard {
+    background-image: url('../assets/swc/img/icons/card-mastercard-light.svg');
+}
+i.card.amex {
+    background-image: url('../assets/swc/img/icons/card-amex-light.svg');
+}
+i.card.diners {
+    background-image: url('../assets/swc/img/icons/card-diners-light.svg');
+}
+i.card.discover {
+    background-image: url('../assets/swc/img/icons/card-discover-light.svg');
+}
+i.card.jcb {
+    background-image: url('../assets/swc/img/icons/card-jcb-light.svg');
+}
+
+
+// Country Icons for Navigation
+
+a.country i.icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-sizing:border-box;
+    display: inline-block;
+    font-style:normal;
+    letter-spacing:normal;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    overflow-wrap:normal;
+    text-transform:none;
+    vertical-align:middle;
+    white-space:nowrap;
+    background-size:contain;
+    width: 1.0rem;
+    height: 1.0rem;
+    margin-right: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+
+a.country.au i.icon {
+    background-image: url('../assets/swc/img/icons/australia.svg');
+}
+a.country.ca i.icon {
+    background-image: url('../assets/swc/img/icons/canada.svg');
+}
+a.country.uk i.icon {
+    background-image: url('../assets/swc/img/icons/united-kingdom.svg');
+}
+a.country.us i.icon {
+    background-image: url('../assets/swc/img/icons/global.svg');
+}
+a.country.gl i.icon {
+    background-image: url('../assets/swc/img/icons/global.svg');
+}
+
+
+/*
+Map Images
+*/
+div.address.map {
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing:border-box;
+    display: block;
+    font-style:normal;
+    letter-spacing:normal;
+    overflow-wrap:normal;
+    text-transform:none;
+    vertical-align:middle;
+    white-space:nowrap;
+    background-size:cover;
+    width: 8.5rem;
+    height: 6.5rem;
+    margin-right: 1rem;
+    border:solid 1px $gray-400;
+}
+div.address.map.us {
+    background-image: url('../assets/swc/img/icons/map-us.png');
+}
+div.address.map.au {
+    background-image: url('../assets/swc/img/icons/map-au.png');
+}
+div.address.map.ca {
+    background-image: url('../assets/swc/img/icons/map-ca.png');
+}
+div.address.map.uk {
+    background-image: url('../assets/swc/img/icons/map-uk.png');
+}
+
+
+
+
+/*
+Feature Icons
+*/
+
+i.feature {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    box-sizing:border-box;
+    direction:ltr;
+    display:inline-block;
+    font-style:normal;
+    letter-spacing:normal;
+    overflow-wrap:normal;
+    text-transform:none;
+    vertical-align:top;
+    white-space:nowrap;
+    width:5rem;
+    height:5rem;
+}
+i.feature.customers {
+    background-image: url('../assets/swc/img/icons/feature-customers-stroke.svg');
+}
+i.feature.staff {
+    background-image: url('../assets/swc/img/icons/feature-staff-stroke.svg');
+}
+i.feature.business {
+    background-image: url('../assets/swc/img/icons/feature-business-stroke.svg');
+    // width: 4.7rem;
+}

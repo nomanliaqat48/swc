@@ -1,0 +1,58 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "ServeWell" # the name of your site, e.g. ACME Corp.
+description: "ServeWell is committed to helping Canadian businesses and their employees navigate the food and hospitality industry. We provide training for Food Handler Certification that is recognized Canada-wide. Our goal is make food safety an everyday best practice."
+brandurl: "servewell"
+logo: "/assets/img/logo/swc-logo-color.png"
+logo-width: 796
+logo-height: 125
+livereload: true
+include:
+    - _redirects
+sass:
+    style: compressed
+plugins:
+    - jekyll-minifier
+    - jekyll-image-optim
+# image_optim-jekyll-plugin customizations.
+image_optim:
+  jpeg_quality: 75
+  archive_dir: "_site/assets/swc/img"
+  image_glob: "assets/swc/img/**/*.{gif,png,jpg,jpeg}"
+
+schema:
+  swc:
+    country: Canada
+    currency: CAD
+    language: en-CA
+    phone: 1-888-551-6720
+    support-email: support@servewell.ca
+    site-img-url: /assets/swc/img/pages/featured.jpg
+    site-img-width: 800
+    site-img-height: 450
+    address-street: 77 Bloor St West, Suite 600
+    address-city: Toronto
+    address-region: Ontario
+    postal-code: M5S 1M2
+    rating-value: 4.75
+    rating-count: 75
+
+# Tracking defaults
+mixpanel: ''
+customerio: ''
+gtm: ''
+smartlook: ''
+
+# These are very fiddly. Be sure to reset the jekyll server each time you make a change and sure indenting is structured correctly
+defaults:
+  - scope:
+      path: "pages/swc"
+      type: pages
+    values:
+      mixpanel: e38e1b7cab7c281b994f1d6a3861ef4e
+      customerio: 649182559ee6588e93cd
+      gtm: GTM-TLLKLWN
+      smartlook: 5cde892a6f327ac2bd30ef3a2bc6870190bf7c24
+      country: "Canada"
+      country_code: ca
+      domain: ca

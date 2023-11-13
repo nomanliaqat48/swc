@@ -1,0 +1,116 @@
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": "{{ page.title }}",
+    "mpn": "{{ page.sku }}",
+    "sku": "{{ page.sku }}",
+    "description": "{{ page.description }}",
+    "image": {
+        "@type": "ImageObject",
+        "representativeOfPage": "True",
+        "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ page.url | slice: 4, 999 }}{{ site.schema.swc.site-img-url }}",
+        "width": "{{ site.schema.swc.site-img-width }}",
+        "height": "{{ site.schema.swc.site-img-height }}"
+    },
+    "offers": {
+        "@type": "Offer",
+        "@id": "https://{{ site.brandurl }}.{{ page.domain }}{{ page.url | slice: 4, 999 }}#offer",
+        "price": "{{ page.course-price }}",
+        "priceCurrency": "{{ site.schema.swc.currency }}",
+        "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ page.url | slice: 4, 999 }}",
+        "itemCondition": "New Condition",
+        "availability": "http://schema.org/InStock",
+        "availabilityStarts": "{{ 'now' | date: "%Y" }}-01-01",
+        "availabilityEnds": "{{ 'now' | date: "%Y" }}-12-31",
+        "priceValidUntil": "{{ 'now' | date: "%Y" }}-12-31",
+        "validFrom": "{{ 'now' | date: "%Y" }}-01-01",
+        "category": "purchase",
+        "eligibleRegion": {
+            "@type": "Country",
+            "name": "{{ site.schema.swc.country }}"
+        }
+    },
+    "brand": {
+        "@type": "Brand",
+        "@id": "https://{{ site.brandurl }}.{{ page.domain }}#brand",
+        "name": "{{ site.title }} {{ site.schema.swc.country }}",
+        "description": "{{ site.description }}",
+        "url": "https://{{ site.brandurl }}.{{ page.domain }}",
+        "logo": {
+            "@type": "ImageObject",
+            "representativeOfPage": "True",
+            "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ site.logo }}",
+            "width": "{{ site.logo-width }}",
+            "height": "{{ site.logo-height }}"
+        }
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ site.schema.swc.rating-value }}",
+        "ratingCount": "{{ site.schema.swc.rating-count }}",
+        "bestRating": "5",
+        "worstRating": "1"
+    },
+    "review": [ {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "{{ page.review-value-01 }}"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "{{ page.reviewer-01 }}"
+        },
+        "reviewBody": "{{ page.review-01 }}"
+    },
+    {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "{{ page.review-value-02 }}"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "{{ page.reviewer-02 }}"
+        },
+        "reviewBody": "{{ page.review-02 }}"
+    },
+    {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "{{ page.review-value-03 }}"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "{{ page.reviewer-03 }}"
+        },
+        "reviewBody": "{{ page.review-03 }}"
+    },
+    {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "{{ page.review-value-04 }}"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "{{ page.reviewer-04 }}"
+        },
+        "reviewBody": "{{ page.review-04 }}"
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "{{ page.review-value-05 }}"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "{{ page.reviewer-05 }}"
+      },
+      "reviewBody": "{{ page.review-05 }}"
+    }]
+}
+</script>

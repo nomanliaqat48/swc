@@ -1,0 +1,23 @@
+-   persona_description: "I'm planning to start a food business in the future"
+    persona_code: PERPLN
+
+-   persona_description: "I'm about to open a new food business"
+    persona_code: PERNEW
+
+-   persona_description: "I own or manage a food business"
+    persona_code: PEROWN
+
+-   persona_description: "I'm looking for a job in the food industry"
+    persona_code: PERJOB
+
+-   persona_description: "I'm a manager that needs to train my staff"
+    persona_code: PERMAN
+
+-   persona_description: "I'm an employee that works with food"
+    persona_code: PEREMP
+
+-   persona_description: "I have a general interest in food safety"
+    persona_code: PERGEN
+
+-   persona_description: "Other"
+    persona_code: PEROTH

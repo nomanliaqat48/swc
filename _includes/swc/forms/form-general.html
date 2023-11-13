@@ -1,0 +1,137 @@
+
+{% assign event_type = "enquiry_submit" %}
+
+<form id="form-enquiry" name="form-general-swc" action="https://formspree.io/f/mgerbkbd" method="POST" class="clearfix form-validation">
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="firstname">First Name *</label>
+            <input required name="firstname" type="text" class="form-control" id="form-enquiry-firstname" aria-describedby="" placeholder="e.g. John" maxlength="40">
+            <div class="feedback invalid-feedback">Please provide your first name</div>
+        </div>
+        <div class="form-group col-6">
+            <label for="lastname">Last Name *</label>
+            <input required name="lastname" type="text" class="form-control" id="form-enquiry-lastname" aria-describedby="" placeholder="e.g. Smith" maxlength="40">
+            <div class="feedback invalid-feedback">Please provide your last name</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="email">Email Address *</label>
+            <input required name="email" type="email" class="form-control" id="form-enquiry-email" aria-describedby="" placeholder="e.g. john@email.com" maxlength="80">
+            <div class="feedback invalid-feedback">Please provide a valid email address</div>
+        </div>
+        <div class="form-group col-6">
+            <label for="phone">Phone Number *</label>
+            <input type="text" name="phone" class="form-control" id="form-enquiry-phone" aria-describedby="" placeholder="e.g. 1 400-000-000" minlength="10" maxlength="80">
+            <div class="feedback invalid-feedback">Please provide your phone number</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-12">
+            <label for="subject">Subject *</label>
+            <input required name="subject" type="text" class="form-control" id="form-enquiry-subject" aria-describedby="" placeholder="In just a few words, describe your enquiry" maxlength="255">
+            <div class="feedback invalid-feedback">Please provide a subject line</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-12">
+            <label for="message">Message *</label>
+            <textarea required name="message" type="text" class="form-control" id="form-enquiry-message" aria-describedby="" rows="10" cols="50" placeholder="Provide a detailed description of your enquiry"></textarea>
+            <div class="feedback invalid-feedback">Please provide a detailed description of your enquiry</div>
+        </div>
+    </div>
+
+    <input type="hidden" name="geo_city" />
+    <input type="hidden" name="geo_region" />
+    <input type="hidden" name="geo_country" />
+
+    <input type="hidden" name="campaign_code" value="{{ page.campaign_code}}" />
+    <input type="hidden" name="campaign_sfid" value="{{ page.campaign_sfid}}" />
+    <input type="hidden" name="brand_code" value="{{ layout.brand_code}}" />
+    <input type="hidden" name="brand_sfid" value="{{ layout.brand_sfid}}" />
+
+    <button id="form-enquiry-submit" type="submit" class="mt-4 btn btn-lg btn-cta float-right">
+      <span class="d-none d-sm-block">{{ include.submit_text }}</span>
+      <span class="d-sm-none">Submit</span>
+    </button>
+    <div class="clear"></div>
+
+    <input type="hidden" name="lead_notes" value="{{ page.lead_notes}}" />
+
+</form>
+
+{% include /scripts/form-validation.html %}
+
+<script>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+
+            var forms = document.querySelectorAll('#form-enquiry');
+
+            var validation = Array.prototype.filter.call(forms, function(form) {
+
+                form.addEventListener('submit', function(event) {
+
+                    if (!form.checkValidity()) {
+
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                    } else {
+
+                        var email = document.querySelector("#form-enquiry-email").value;
+
+                        _cio.identify({
+                            id: email,
+                            email: email,
+                            first_name: document.querySelector("#form-enquiry-firstname").value,
+                            last_name: document.querySelector("#form-enquiry-lastname").value,
+                            geo_city: city,
+                            geo_region: region,
+                            geo_country: country,
+                            phone: document.querySelector("#form-enquiry-phone").value,
+                            mixpanel_id: mixpanel ? mixpanel.get_distinct_id() : null,
+                        });
+
+                        if (mixpanel) {
+                            mixpanel.identify();
+                            mixpanel.people.set({"$email": email});
+                        }
+
+                        _cio.track("form_submit", {
+                            "submitted_at": Math.floor(Date.now()/1000),
+                            "brand_name": "{{ layout.brand_name }}",
+                            "brand_code": "{{ layout.brand_code }}",
+                            "brand_sfid": "{{ layout.brand_sfid }}",
+                            "event_type": "{{ event_type }}",
+                            "event_code": "{{ page.campaign_code }}-{{ event_type }}",
+                            "campaign_name": "{{ page.campaign_name }}",
+                            "campaign_code": "{{ page.campaign_code }}",
+                            "campaign_sfid": "{{ page.campaign_sfid }}"
+                        });
+                    }
+
+                    form.classList.add('was-validated');
+
+                }, false);
+            });
+        }, false);
+
+        var city, region, country;
+
+        $.get("https://ipinfo.io?token=8d569c1240a97f", function(response) {
+
+            city = document.querySelector("[name='geo_city']").value = response.city;
+            region = document.querySelector("[name='geo_region']").value = response.region;
+            country = document.querySelector("[name='geo_country']").value = response.country;
+
+        });
+
+    })();
+
+</script>

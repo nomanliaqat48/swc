@@ -1,0 +1,17 @@
+---
+permalink: /news
+title: COVID-19 News for the Food Industry
+description: "Stay up-to-date with all the latest coronavirus news and insights about the COVID-19 pandemic and its impact on the food industry."
+layout: news
+pagination:
+  enabled: false
+sitemap:
+  priority: 0.9
+  changefreq: "daily"
+---
+
+{% for post in site.ca reversed %}
+    {% if post.categories contains 'insights' %}
+        {% include /components/news-card.html %}
+    {% endif %}
+{% endfor %}

@@ -1,0 +1,44 @@
+<script type="application/ld+json">
+{
+    "@context":"http://schema.org",
+    "@type": "{{ page.type }}",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://{{ site.brandurl }}.netlify.com{{page.image}}",
+        "height": 450,
+        "width": 800
+    },
+    "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ page.url | slice: 3, 999 }}/",
+    "headline": "{{ page.title }}",
+    "description": "{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}",
+    "dateCreated": "{{ page.date }}",
+    "datePublished": "{{ page.date }}",
+    "dateModified": "{% if page.modified %}{{ page.modified }}{% else %}{{ page.date }}{% endif %}",
+    "inLanguage": "en-US",
+    "isFamilyFriendly": "True",
+    "isAccessibleForFree": "True",
+    "copyrightYear": "{{ site.time | date: '%Y' }}",
+    "copyrightHolder": "{{ site.title }}",
+    "author": {
+        "@type": "Organization",
+        "name": "{{ site.title }}"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "description": "{{ site.description }}",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ site.logo }}",
+            "width":"386",
+            "height":"60"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://{{ site.brandurl }}.com{{ page.url | slice: 3, 999 }}/"
+    },
+    "keywords": "{{ page.keywords }}",
+    "articleSection": "{{ page.category }}"
+}
+</script>

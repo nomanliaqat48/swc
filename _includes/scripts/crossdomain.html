@@ -1,0 +1,31 @@
+<!-- <script>
+document.addEventListener("DOMContentLoaded", function(){
+
+    var distinct_id;
+
+    mixpanel.init('e38e1b7cab7c281b994f1d6a3861ef4e', {
+        loaded: function(mixpanel) {
+            distinct_id = mixpanel.get_distinct_id();
+        }
+    });
+
+    var xd_cookie = xDomainCookie('//mca-js.s3.us-east-2.amazonaws.com',"icc.moncel",true);
+	xd_cookie.get( 'mpid', function(cookie_val){
+
+        // No value exists
+		if(!cookie_val){
+
+            // Get MPID and Set in Cookie
+            if(distinct_id){
+
+                // Set in Cookie
+                xd_cookie.set( 'mpid', distinct_id, 2000 );
+            }
+		} else {
+
+            // Set MP Distinct ID from Cookie
+            mixpanel.identify(cookie_val);
+        }
+	});
+})
+</script> -->

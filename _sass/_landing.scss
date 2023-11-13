@@ -1,0 +1,61 @@
+// Landing Pages
+
+header#lp-header.navbar {
+    background-color: $black;
+}
+#lp-launch-campaign {
+
+}
+#lp-launch-campaign #hero.wrap,
+#lp-launch-campaign #hero .carousel-inner {
+    background-color: $black;
+}
+#lp-launch-campaign .carousel-image:after {
+  position:absolute;
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 2;
+  background: linear-gradient(70deg, #000 0%, #000000 20%, rgba(17,86,107,0) 90%, rgba(255,0,0,0) 100%);
+
+
+}
+#lp-launch-campaign .display-1,
+#lp-launch-campaign .display-2,
+#lp-launch-campaign .display-3,
+#lp-launch-campaign .display-4,
+#lp-launch-campaign .display-5 {
+    color: $gray-800;
+}
+#lp-launch-campaign #hero .display-1,
+#lp-launch-campaign #hero .display-2 {
+    color: $white;
+}
+
+// Promo code
+#lp-launch-campaign .discount-offer {
+    text-align: center;
+    border: dashed 4px $black;
+    color: $black;
+    background: $gray-100;
+}
+#lp-launch-campaign .lead p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin:0;
+
+}
+#lp-launch-campaign .promo-code {
+    font-family: "Roboto Condensed", arial, sans-serif;
+    font-size: 2.6rem;
+    font-weight: 300;
+}
+#lp-launch-campaign .promo-code strong {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 700;
+}
+#lp-launch-campaign .terms {
+
+}

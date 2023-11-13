@@ -1,0 +1,227 @@
+
+{% assign event_type = "lm_submit" %}
+
+<form novalidate id="form-lm" data-netlify="true" name="form-lm-swc-website" action="{{ page.confirmation }}" method="POST" class="clearfix form-validation">
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="firstname">First Name</label>
+            <input required name="firstname" type="text" class="form-control" id="form-lm-firstname" aria-describedby="" placeholder="e.g. John">
+            <div class="invalid-feedback">Please provide a first name</div>
+        </div>
+        <div class="form-group col-6">
+            <label for="lastname">Last Name</label>
+            <input required name="lastname" type="text" class="form-control" id="form-lm-lastname" aria-describedby="" placeholder="e.g. Smith">
+            <div class="invalid-feedback">Please provide a last name</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="email">Email Address</label>
+            <input required name="email" type="email" class="form-control" id="form-lm-email" aria-describedby="" placeholder="e.g. john@email.com">
+            <div class="invalid-feedback">Please provide an email address</div>
+        </div>
+        <div class="form-group col-6">
+            <label for="phone">Phone Number</label>
+            <input type="text" name="phone" class="form-control" id="form-lm-phone" aria-describedby="" placeholder="e.g. 0400 000 000">
+            <div class="invalid-feedback">Please provide a phone number</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="sector">Industry Sector</label>
+            <select class="form-control" name="sector" id="form-lm-sector">
+                <option disabled selected value> -- Choose Option -- </option>
+                {% for sector in site.data.swc.sectors %}
+                <option value="{{ sector.sector_code }}">{{ sector.sector_name }}</option>
+                {% endfor %}
+            </select>
+            <div class="invalid-feedback">Please provide an industry sector</div>
+        </div>
+        <div id="display-subsector" class="form-group col-6">
+            <label for="subsector">Industry Subsector</label>
+            <select class="form-control" name="subsector" id="form-lm-subsector" disabled>
+                <option disabled selected value> -- Choose Option -- </option>
+                {% for subsector in site.data.swc.subsectors %}
+                <option sector_code="{{ subsector.sector_code }}" value="{{ subsector.subsector_code }}">{{ subsector.subsector_name }}</option>
+                {% endfor %}
+            </select>
+            <div class="invalid-feedback">Please provide an industry subsector</div>
+        </div>
+        <div id="display-sector-other" class="form-group col-6" style="display:none;">
+            <label for="sector-other">Other Industry Sector</label>
+            <input name="sector-other" type="text" class="form-control" id="form-lm-sector-other">
+            <div class="invalid-feedback">Please provide a description</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="display-subsector-other" class="form-group col-12" style="display:none;">
+            <label for="subsector-other">Other Industry Subsector</label>
+            <input name="subsector-other" type="text" class="form-control" id="form-lm-subsector-other">
+            <div class="invalid-feedback">Please provide a description</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-12">
+            <label for="persona">Which best describes you?</label>
+            <select class="form-control" name="persona" id="form-lm-persona">
+                <option disabled selected value> -- Choose Option -- </option>
+                {% for persona in site.data.swc.personas %}
+                <option value="{{ persona.persona_code }}">{{ persona.persona_description }}</option>
+                {% endfor %}
+            </select>
+            <div class="invalid-feedback">Please select a description</div>
+        </div>
+    </div>
+
+
+    <input type="hidden" name="geo_city" />
+    <input type="hidden" name="geo_region" />
+    <input type="hidden" name="geo_country" />
+
+    <input type="hidden" name="campaign_code" value="{{ page.campaign_code}}" />
+    <input type="hidden" name="campaign_sfid" value="{{ page.campaign_sfid}}" />
+    <input type="hidden" name="brand_code" value="{{ layout.brand_code}}" />
+    <input type="hidden" name="brand_sfid" value="{{ layout.brand_sfid}}" />
+
+    <button id="form-lm-submit" type="submit" class="mt-4 btn btn-lg btn-cta float-right">{{ include.submit_text }}</button>
+    <div class="clear"></div>
+
+    <input type="hidden" name="lead_notes" value="{{ page.lead_notes}}" />
+
+</form>
+
+<script>
+
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+
+
+            var forms = document.querySelectorAll('#form-lm');
+
+            var validation = Array.prototype.filter.call(forms, function(form) {
+
+                form.addEventListener('submit', function(event) {
+
+                    if (!form.checkValidity()) {
+
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                    } else {
+
+                        var email = document.querySelector("#form-lm-email").value;
+
+                        _cio.identify({
+                            id: email,
+                            email: email,
+                            first_name: document.querySelector("#form-lm-firstname").value,
+                            last_name: document.querySelector("#form-lm-lastname").value,
+                            geo_city: city,
+                            geo_region: region,
+                            geo_country: country,
+                            phone: document.querySelector("#form-lm-phone").value,
+                            mixpanel_id: mixpanel ? mixpanel.get_distinct_id() : null,
+                            sector: $( "#form-lm-sector option:selected" ).text(),
+                            sector_code: document.querySelector("#form-lm-sector").value,
+                            subsector: $( "#form-lm-subsector option:selected" ).text(),
+                            subsector_code: document.querySelector("#form-lm-subsector").value,
+                            sector_other: document.querySelector("#form-lm-sector-other").value,
+                            subsector_other: document.querySelector("#form-lm-subsector-other").value,
+                            persona: $( "#form-lm-persona option:selected" ).text(),
+                            persona_code: document.querySelector("#form-lm-persona").value
+                        });
+
+                        if (mixpanel) {
+                            mixpanel.identify();
+                            mixpanel.people.set({"$email": email});
+                        }
+
+                        _cio.track("form_submit", {
+                            "submitted_at": Math.floor(Date.now()/1000),
+                            "brand_name": "{{ layout.brand_name }}",
+                            "brand_code": "{{ layout.brand_code }}",
+                            "brand_sfid": "{{ layout.brand_sfid }}",
+                            "event_type": "{{ event_type }}",
+                            "event_code": "{{ page.campaign_code }}-{{ event_type }}",
+                            "campaign_name": "{{ page.campaign_name }}",
+                            "campaign_code": "{{ page.campaign_code }}",
+                            "campaign_sfid": "{{ page.campaign_sfid }}"
+                        });
+                    }
+
+                    form.classList.add('was-validated');
+
+                }, false);
+            });
+        }, false);
+
+        var city, region, country;
+
+        $.get("https://ipinfo.io?token=8d569c1240a97f", function(response) {
+
+            city = document.querySelector("[name='geo_city']").value = response.city;
+            region = document.querySelector("[name='geo_region']").value = response.region;
+            country = document.querySelector("[name='geo_country']").value = response.country;
+
+        });
+
+    })();
+
+    $(document).ready(function() {
+
+        var $sector = $( '#form-lm-sector' ), $subsector = $( '#form-lm-subsector' ),$options = $subsector.find( 'option' );
+
+        $sector.on( 'change', function() {
+
+            $subsector.html( $options.filter( '[sector_code="' + this.value + '"]' ));
+            $subsector.prepend(new Option(" -- Choose Option -- ", ""));
+            $subsector.append(new Option("Other", "OTH"));
+            $subsector.get(0).selectedIndex = 0;
+        }).trigger('change');
+
+        $sector.on( 'change', function() {
+
+            var sectorOption = $(this).children("option:selected").val();
+            if(sectorOption == "OTH") {
+
+                $("#display-sector-other").show();
+                $("#display-subsector").hide();
+                $("#display-subsector-other").hide();
+                $subsector.attr("disabled",true);
+            }
+            else {
+
+                $("#display-subsector").show();
+                $("#display-sector-other").hide();
+                $subsector.attr("disabled",false);
+
+            }
+        }).trigger('change');
+
+        $subsector.on( 'change', function() {
+
+            var subsectorOption = $(this).children("option:selected").val();
+            if(subsectorOption == "OTH") {
+
+                $("#display-subsector-other").show();
+            }
+            else {
+
+                $("#display-subsector-other").hide();
+            }
+        }).trigger( 'change' );
+
+        $sector.click(function() {
+            $subsector.prop("disabled", false);
+            $subsector.removeAttr("disabled");
+        });
+
+    });
+
+</script>

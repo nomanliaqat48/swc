@@ -1,0 +1,27 @@
+<script type="application/ld+json">
+{
+     "@context": "http://schema.org/",
+     "@type": "WebSite",
+     "@id": "https://{{ site.brandurl }}.{{ page.domain }}{{ page.url | slice: 3, 999 }}/#website",
+     "name": "{{ site.title }}",
+     "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ page.url | slice: 3, 999 }}/",
+     "publisher": {
+         "@type": "Organization",
+         "@id": "https://{{ site.brandurl }}.{{ page.domain }}{{ page.url | slice: 3, 999 }}/#website-publisher",
+         "name": "{{ site.title }}",
+         "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ page.url | slice: 3, 999 }}/",
+         "sameAs": [
+             "https://www.facebook.com/canfoodsafety/",
+             "https://www.linkedin.com/company/canadian-institute-of-food-safety/"
+         ],
+         "logo": {
+             "@type": "ImageObject",
+             "representativeOfPage": "True",
+             "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ site.logo }}",
+             "width": "350",
+             "height": "78"
+         }
+     },
+     "inLanguage": "{{ site.language }}"
+  }
+</script>

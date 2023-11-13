@@ -1,0 +1,17 @@
+-   sector_name: Hospitality
+    sector_code: HOS
+
+-   sector_name: Food Retail
+    sector_code: RET
+
+-   sector_name: Food Processing
+    sector_code: FPR
+
+-   sector_name: Health & Community
+    sector_code: HLT
+
+-   sector_name: Transport & Distribution
+    sector_code: TRA
+
+-   sector_name: Other
+    sector_code: OTH

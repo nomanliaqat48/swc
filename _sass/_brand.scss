@@ -1,0 +1,42 @@
+
+
+
+
+
+.brand.white {
+    background-image: url('../assets/swc/img/logo/rsp-logo-white.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+}
+.brand.green {
+    background-image: url('../assets/swc/img/logo/rsp-logo-green.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: auto;
+}
+.brand.left {
+    background-position:left;
+}
+.brand.center {
+    background-position:center;
+}
+.brand.right {
+    background-position:right;
+}
+.brand.xs {
+    height:1.6rem;
+}
+.brand.sm {
+    height: 2.2rem;
+}
+.brand.md {
+    height: 3.1rem;
+}
+.brand.lg {
+    height: 3.8rem;
+}
+.brand.xl {
+    height: 4.5rem;
+}

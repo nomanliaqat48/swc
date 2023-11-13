@@ -1,0 +1,312 @@
+
+html#app,
+html#app body {
+    background: $rsp-very-light-gray;
+}
+html#app .ms-style {
+    min-height:auto!important;
+}
+#app button.navbar-toggler {
+    align-items: center;
+}
+
+#app {
+  nav {
+    a, div {
+      &.navbar-brand {
+        text-align: center;
+        margin:0;
+        background: $primary;
+        border-bottom: solid 1px $white;
+        .logo {
+          background-image: url('../assets/swc/img/logo/rsp-logo.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: auto;
+          margin:0;
+          padding:0;
+        }
+      }
+      &.navbar-brand.mobile {
+        background: none;
+        border:none;
+        .logo {
+          width:14rem;
+        }
+      }
+    }
+  }
+}
+
+#sidebar {
+    height: 100%!important;
+}
+#app .navbar-brand,
+#sidebar-nav,
+#sidebar-nav ul.nav {
+    width:100%;
+}
+#app .navbar-brand.mobile {
+    width:auto;
+}
+
+
+html#app .nav .icon {
+
+}
+
+// Remove later
+html#app .ms-style .ms-test-mode {
+    left:auto!important;
+    right:1rem!important;
+}
+
+
+
+#app main {
+    background: $gray-200;
+}
+#app nav {
+    padding:0;
+    background: $primary;
+}
+
+#app ul.nav li {
+    padding:0;
+
+    // border-bottom: solid 1px darken($rsp-dark, 15%);
+}
+#app ul.nav.top li {
+    border-bottom: solid 1px $white;
+}
+#app ul.nav.btm li {
+    border-top: solid 1px $white;
+}
+
+#app ul.nav li:hover {
+    background: lighten($rsp-dark-cyan, 5%);
+}
+#app ul.nav li a {
+    color: $white;
+    font-weight: 200;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    padding:1.25rem 1rem;
+
+}
+#app {
+  div {
+    &.card {
+      margin-bottom:2rem;
+      .col-lg-8 {
+        .card-text {
+          min-height:6rem;
+        }
+      }
+
+    }
+  }
+}
+
+
+#app div.card {
+    margin-bottom:2rem;
+}
+#app div.card .card-title {
+    margin-bottom:0;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+#app div.card small.text-muted {
+    font-size:1.2rem;
+    font-weight: 200;
+    color: $rsp-dark-cyan;
+    display: block;
+    margin-bottom: 1rem;
+}
+#app .panel {
+    background: $white;
+    border: solid 1px $gray-300;
+}
+
+// Memberstack
+#memberstack-login-signup .ms-signup-h1 {
+    color: $rsp-dark-cyan!important;
+    font-weight: 200!important;
+}
+
+#memberstack-login-signup .ms-signup-label {
+    font-weight: 400;
+    font-size:0.9rem;
+
+}
+
+#memberstack-checkout {
+  .ms-modal-container {
+    .ms-coupon-wrapper {
+      width: auto;
+      height: 60px;
+      box-shadow: 0 3px 6px 0 rgba(45, 62, 80, 0.08);
+      border-radius: 5px;
+      background:white;
+      .ms-coupon-svg {
+        top: 0;
+        svg {
+          path {
+            stroke:$primary;
+          }
+        }
+      }
+    }
+    .ms-stripe-form-wrapper {
+      .ms-discover {
+        display:none;
+      }
+      .ms-card {
+        display:none;
+      }
+      #stripe-checkout-form {
+        label {
+          visibility: hidden;
+          &::before {
+            visibility: visible;
+            display: inline-block;
+            content: 'Credit Card';
+          }
+        }
+      }
+    }
+
+  }
+}
+
+// Lesson Images
+#app .card.lesson .card-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    box-sizing:border-box;
+    direction:ltr;
+    display:inline-block;
+    font-style:normal;
+    letter-spacing:normal;
+    overflow-wrap:normal;
+    text-transform:none;
+    vertical-align:top;
+    white-space:nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#lesson-1.card .card-img {
+    background-image: url('../assets/swc/img/app/lesson-1.jpg');
+}
+#lesson-2.card .card-img {
+    background-image: url('../assets/swc/img/app/lesson-2.jpg');
+}
+#lesson-3.card .card-img {
+    background-image: url('../assets/swc/img/app/lesson-3.jpg');
+}
+#lesson-4.card .card-img {
+    background-image: url('../assets/swc/img/app/lesson-4.jpg');
+}
+#lesson-5.card .card-img {
+    background-image: url('../assets/swc/img/app/lesson-5.jpg');
+}
+#lesson-6.card .card-img {
+    background-image: url('../assets/swc/img/app/lesson-6.jpg');
+}
+#certificate-1.card .card-img {
+    background-image: url('../assets/swc/img/app/cert-1.jpg');
+}
+
+#guide-1.card .card-img {
+    background-image: url('../assets/swc/img/app/guide-1.jpg');
+}
+#guide-2.card .card-img {
+    background-image: url('../assets/swc/img/app/guide-2.jpg');
+}
+#guide-3.card .card-img {
+    background-image: url('../assets/swc/img/app/guide-3.jpg');
+}
+#guide-4.card .card-img {
+    background-image: url('../assets/swc/img/app/guide-4.jpg');
+}
+#guide-5.card .card-img {
+    background-image: url('../assets/swc/img/app/guide-5.jpg');
+}
+#guide-6.card .card-img {
+    background-image: url('../assets/swc/img/app/guide-6.jpg');
+}
+#guide-7.card .card-img {
+    background-image: url('../assets/swc/img/app/guide-7.jpg');
+}
+#guide-8.card .card-img {
+    background-image: url('../assets/swc/img/app/guide-8.jpg');
+}
+
+#check-1.card .card-img {
+    background-image: url('../assets/swc/img/app/check-1.jpg');
+}
+#check-2.card .card-img {
+    background-image: url('../assets/swc/img/app/check-2.jpg');
+}
+#check-3.card .card-img {
+    background-image: url('../assets/swc/img/app/check-3.jpg');
+}
+
+#fact-1.card .card-img {
+    background-image: url('../assets/swc/img/app/fact-1.jpg');
+}
+#fact-2.card .card-img {
+    background-image: url('../assets/swc/img/app/fact-2.jpg');
+}
+#fact-3.card .card-img {
+    background-image: url('../assets/swc/img/app/fact-3.jpg');
+}
+#fact-4.card .card-img {
+    background-image: url('../assets/swc/img/app/fact-4.jpg');
+}
+
+#fact-5.card .card-img {
+    background-image: url('../assets/swc/img/app/fact-5.jpg');
+}
+
+#poster-1.card .card-img {
+    background-image: url('../assets/swc/img/app/poster-1.jpg');
+}
+#poster-2.card .card-img {
+    background-image: url('../assets/swc/img/app/poster-2.jpg');
+}
+#poster-3.card .card-img {
+    background-image: url('../assets/swc/img/app/poster-3.jpg');
+}
+#poster-4.card .card-img {
+    background-image: url('../assets/swc/img/app/poster-4.jpg');
+}
+#poster-5.card .card-img {
+    background-image: url('../assets/swc/img/app/poster-5.jpg');
+}
+#poster-6.card .card-img {
+    background-image: url('../assets/swc/img/app/poster-6.jpg');
+}
+
+.close {
+    color: $primary;
+    opacity: 1;
+    font-weight: 200;
+    font-size: 2rem
+}
+.modal-header,
+.modal-body {
+    background: $white;
+}
+.modal .modal-title {
+    font-size:1.4rem;
+}
+
+
+html#app .modal-dialog {
+    max-width: 1100px !important;
+    margin: 1.75rem auto;
+}

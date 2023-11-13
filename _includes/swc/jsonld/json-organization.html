@@ -1,0 +1,50 @@
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "Organization",
+    "additionalType": "EducationalOrganization",
+    "@id": "https://{{ site.brandurl }}.{{ page.domain }}#organization",
+    "url": "https://{{ site.brandurl }}.{{ page.domain }}",
+    "name": "{{ site.title }} {{ site.schema.swc.country }}",
+    "description": "{{ site.description }}",
+    "telephone": "{{ site.schema.swc.phone }}",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{{ site.schema.swc.phone }}",
+        "url": "https://{{ site.brandurl }}.{{ page.domain }}",
+        "availableLanguage": "English",
+        "contactType": "Customer service",
+        "contactOption": "TollFree",
+        "email": "{{ site.schema.swc.support-email }}"
+    },
+    "image": {
+        "@type": "ImageObject",
+        "representativeOfPage": "True",
+        "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ page.url | slice: 4, 999 }}{{ site.schema.swc.site-img-url }}",
+        "width": "{{ site.schema.swc.site-img-width }}",
+        "height": "{{ site.schema.swc.site-img-height }}"
+    },
+    "logo": {
+        "@type": "ImageObject",
+        "representativeOfPage": "True",
+        "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ site.logo }}",
+        "width": "{{ site.logo-width }}",
+        "height": "{{ site.logo-height }}"
+    },
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.schema.swc.address-street }}",
+        "addressLocality": "{{ site.schema.swc.address-city }}",
+        "addressRegion": "{{ site.schema.swc.address-region }}",
+        "postalCode": "{{ site.schema.swc.postal-code }}",
+        "addressCountry": "{{ site.schema.swc.country }}"
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ site.schema.swc.rating-value }}",
+        "ratingCount": "{{ site.schema.swc.rating-count }}",
+        "bestRating": "5",
+        "worstRating": "1"
+    }
+}
+</script>

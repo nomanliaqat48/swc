@@ -1,0 +1,63 @@
+---
+layout: null
+permalink: /swc/sitemap.xml
+sitemap:
+  priority: 0.7
+  changefreq: "monthly"
+  exclude: "yes"
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}
+    {% unless page.sitemap.exclude == "yes" %}
+      {% if page.url contains "/swc" %}
+        <url>
+          <loc>https://www.{{ site.brandurl }}.{{ page.domain }}{{ page.url | remove: "index.html" | slice: 4, 999 }}</loc>
+          {% if page.modified %} {{ layout }}
+            <lastmod>{{ page.modified | date_to_xmlschema }}</lastmod>
+          {% elsif page.date %}
+            <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+          {% else %}
+            <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+          {% endif %}
+          {% if page.sitemap.changefreq %}
+            <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+          {% else %}
+            <changefreq>monthly</changefreq>
+          {% endif %}
+          {% if page.sitemap.priority %}
+            <priority>{{ page.sitemap.priority }}</priority>
+          {% else %}
+            <priority>0.8</priority>
+          {% endif %}
+        </url>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+
+  {% for post in site.ca %}
+    {% unless post.published == false or post.sitemap.exclude == "yes" %}
+      <url>
+        <loc>https://{{ site.brandurl }}.{{page.domain}}{{ post.url | remove: "index.html" | slice: 3, 999 }}</loc>
+        {% if post.modified %}
+          <lastmod>{{ post.modified | date_to_xmlschema }}</lastmod>
+        {% elsif post.date %}
+          <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+          <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% endif %}
+        {% if post.sitemap.changefreq %}
+          <changefreq>{{ post.sitemap.changefreq }}</changefreq>
+        {% else %}
+          <changefreq>monthly</changefreq>
+        {% endif %}
+        {% if post.sitemap.priority %}
+          <priority>{{ post.sitemap.priority }}</priority>
+        {% else %}
+          <priority>0.5</priority>
+        {% endif %}
+      </url>
+    {% endunless %}
+  {% endfor %}
+</urlset>

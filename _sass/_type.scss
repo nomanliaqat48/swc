@@ -1,0 +1,179 @@
+$font-size-base: 18px;
+
+body {
+  font-size:18px;
+}
+
+@font-face {
+    font-family: 'azo-sans-web', sans-serif;
+    font-weight: 400;
+    font-weight: 500;
+}
+html,body {
+   font-family: 'azo-sans-web', sans-serif;
+   font-weight: 400;
+   color: $secondary;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'azo-sans-web', sans-serif;
+    font-weight: 600;
+    line-height:3rem;
+    color: $primary;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight:500;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height:1rem;
+}
+
+h6 {
+    text-transform: uppercase;
+}
+
+p,li {
+    font-weight: 200;
+    line-height:2rem;
+}
+
+a {
+  color: $primary;
+  &:hover {
+    color: $primary;
+  }
+}
+
+a.large {
+    font-size:120%;
+}
+
+small,.small {
+    font-weight: 300;
+    font-size:70%;
+    display: inline-block;
+}
+
+.systeminfo p {
+    font-size: 0.8rem;
+    color: #ddd;
+}
+
+h4.features {
+    font-size: 1.1rem;
+    border-bottom:solid 1px $hr;
+}
+
+h5.card-title {
+    text-transform: none;
+    font-weight: 500;
+}
+
+b, strong {
+    font-weight: 500;
+}
+
+p.lead {
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+    font-weight: 200;
+    letter-spacing: -0.5px;
+}
+p.lead-2 {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    font-weight: 200;
+}
+
+// Display Headers
+.display-1 {
+    font-family: 'azo-sans-web', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.5rem;
+    letter-spacing: -0.9px;
+    margin-bottom: 2rem;
+}
+.display-2 {
+    font-family: 'azo-sans-web', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: -1px;
+    margin-bottom: 0.75rem;
+}
+.display-3 {
+    font-family: 'azo-sans-web', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+.display-4 {
+    font-family: 'azo-sans-web', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.8rem;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+}
+
+.media {
+  .media-body {
+    p {
+      line-height: 2rem;
+    }
+  }
+}
+
+blockquote {
+  font-style:italic;
+  .reviewer {
+    font-style: normal;
+    font-size:.9rem;
+  }
+}
+
+.cta {
+  color:$white;
+}
+
+#hero {
+  h1 {
+    color:$white;
+    font-size:3rem;
+  }
+  p {
+    font-size:1.5rem;
+    line-height:2.5rem;
+    margin-bottom:2rem;
+  }
+}
+
+.highlight {
+  color: $secondary-alt;
+}
+
+footer {
+  p {
+    font-weight: 200;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+}

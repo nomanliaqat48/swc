@@ -1,0 +1,11 @@
+-   business-size_name: Micro (1 - 4 Employees)
+    business-size_code: EMPMIC
+
+-   business-size_name: Small (5 - 19 Employees)
+    business-size_code: EMPSML
+
+-   business-size_name: Medium (20 - 199 Employees)
+    business-size_code: EMPMED
+
+-   business-size_name: Large (200+ Employees)
+    business-size_code: EMPLRG

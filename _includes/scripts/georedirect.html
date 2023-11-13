@@ -1,0 +1,56 @@
+<script>
+
+    $(document).ready(function() {
+
+        var ip;
+        var city;
+        var region;
+        var country;
+
+        $.get("https://ipinfo.io?token=8d569c1240a97f", function(response) {
+
+            userIP = response.ip;
+            userCity = response.city;
+            userRegion = response.region;
+            userCountry = response.country;
+
+            cityRedirect = "";
+            regionRedirect = "";
+            countryRedirect = "";
+            defaultRedirect = "/foodsafety/default";
+
+            {% for page in site.pages %}
+
+                {% if page.location and page.type == "city" %}
+
+                    if (userCity == "{{page.location}}"){cityRedirect = "{{ page.url }}";}
+
+                {% elsif page.location and page.type == "region" %}
+
+                    if (userRegion == "{{page.location}}") {regionRedirect = "{{ page.url }}";}
+
+                {% elsif page.location and page.type == "country" %}
+
+                    if (userCountry == "{{page.location}}") {countryRedirect = "{{ page.url }}";}
+
+                {% endif %}
+
+            {% endfor %}
+
+            if (cityRedirect != "") {
+                window.location.replace(cityRedirect);
+            }
+            else if (regionRedirect = !"") {
+                window.location.replace(regionRedirect);
+            }
+            else if (countryRedirect != "") {
+                window.location.replace(countryRedirect);
+            }
+            else {
+                window.location.replace(defaultRedirect);
+            }
+
+        }, "jsonp");
+    });
+
+</script>

@@ -1,0 +1,34 @@
+
+#geo-modal .modal-header {
+    color:$white;
+    background: $primary;
+    border-bottom:solid 1px darken($rsp-light-cyan, 5%);
+}
+
+#geo-modal .modal-body {
+    padding:0 2rem;
+    background: $primary;
+}
+#geo-modal .modal-content {
+    background: $primary;
+}
+#geo-modal .list-group-item {
+    background: $primary;
+    border-bottom:solid 1px darken($rsp-light-cyan, 5%);
+    padding:1rem;
+}
+#geo-modal li.list-group-item a {
+    color:$white;
+    border:none;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+#geo-modal li.list-group-item i.icon {
+    margin-right: 1rem;
+}
+#geo-modal .modal-header .close {
+    font-family: arial, sans-serif!important;
+    font-size: 1.9rem;
+    color:$white;
+    font-weight: 400;
+}

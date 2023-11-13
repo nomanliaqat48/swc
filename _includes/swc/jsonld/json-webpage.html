@@ -1,0 +1,36 @@
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org/",
+    "@type": "WebPage",
+    "@id": "https://{{ site.brandurl }}.{{ page.domain }}#webpage",
+    "description": "{{ page.description }}",
+    "author": {
+        "@type": "Organization",
+        "@id": "https://{{ site.brandurl }}.{{ page.domain }}#webpage-author",
+        "name": "{{ site.title }} {{ site.schema.swc.country }}",
+        "url": "https://{{ site.brandurl }}.{{ page.domain }}",
+        "logo": {
+            "@type": "ImageObject",
+            "representativeOfPage": "True",
+            "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ site.logo }}",
+            "width": "{{ site.logo-width }}",
+            "height": "{{ site.logo-height }}"
+        }
+    },
+    "publisher": {
+        "@type": "Organization",
+        "@id": "https://{{ site.brandurl }}.{{ page.domain }}#webpage-organization",
+        "name": "{{ site.title }} {{ site.schema.swc.country }}",
+        "url": "https://{{ site.brandurl }}.{{ page.domain }}",
+        "logo": {
+            "@type": "ImageObject",
+            "representativeOfPage": "True",
+            "url": "https://{{ site.brandurl }}.{{ page.domain }}{{ site.logo }}",
+            "width": "{{ site.logo-width }}",
+            "height": "{{ site.logo-height }}"
+        }
+    },
+    "isAccessibleForFree": "True",
+    "inLanguage": "{{ site.schema.swc.language }}"
+}
+</script>

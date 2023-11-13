@@ -1,0 +1,119 @@
+.btn {
+  border-radius: 30px;
+  border-width: 0px;
+  border-style: solid;
+  padding: 1rem 2.5rem;
+  text-align: center;
+  white-space: normal;
+  vertical-align: middle;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.125rem;
+  touch-action: manipulation;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-transition: opacity .15s linear;
+  transition: opacity .15s linear;
+  -ms-touch-action: manipulation;
+  user-select: none;
+  display: inline-block;
+  margin-bottom: 0;
+  color: $white !important;
+}
+
+.btn-cta {
+  background: linear-gradient(to bottom,$cta,$cta);
+  border: solid 1px $cta;
+  border-top: solid 1px $cta;
+  border-bottom: solid 1px $cta;
+  &:hover {
+    background: linear-gradient(to bottom,lighten($cta, 10%),lighten($cta, 10%));
+    border: solid 1px lighten($cta, 10%);
+    border-top: solid 1px lighten($cta, 10%);
+    border-bottom: solid 1px lighten($cta, 10%);
+  }
+}
+
+.btn-sm {
+  font-size:1.05rem;
+  padding: .5rem 1.2rem;
+}
+
+.navbar {
+  .btn-sm:hover {
+    text-decoration: underline;
+    &.btn-outline-light {
+      text-decoration:none;
+    }
+  }
+}
+
+// #hero .carousel-caption a.btn {
+//     border:solid 1px $white;
+// }
+// #hero-cta .btn-cta::before {
+//   display: inline-block;
+//   content: "";
+//   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/></svg>");
+//   background-repeat: no-repeat;
+//   background-size: 1rem 1rem;
+//   background-color: red;
+// }
+//
+// #hero a.btn-cta {
+//     background-color: $secondary;
+//     color: $primary;
+//     font-weight: 600;
+//     border:solid 2px $white;
+//     animation-duration: 0.8s;
+//     animation-delay: 0.5s;
+// }
+a.btn.btn-primary {
+    color: $white;
+}
+a.btn.btn-rsp-red {
+    color: $white;
+}
+a.btn-link {
+    padding: 0;
+}
+.btn-white {
+    color: $primary;
+}
+a.btn.btn-xs {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.8rem;
+}
+
+.btn-outline-dark {
+  border-color:$primary;
+  &:hover {
+    color: white !important;
+    background-color: $primary;
+  }
+}
+
+.btn-outline-light {
+  border:2px solid white;
+  color: white !important;
+  &:hover {
+    background-color: $secondary;
+  }
+  &::after {
+    content: url("/assets/swc/img/icons/right-arrow-light.svg");
+    display: block;
+    float:right;
+    margin-left: .5rem;
+    width: 15px;
+    height: 15px;
+    @include media-breakpoint-only(lg) {
+      width: 13px;
+      height: 13px;
+    }
+    @include media-breakpoint-only(md) {
+      width: 13px;
+      height: 13px;
+      margin-top:1px;
+    }
+  }
+}

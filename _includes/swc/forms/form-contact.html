@@ -1,0 +1,118 @@
+<form novalidate id="contact-form" data-netlify="true" name="contact-form" action="/contact/confirmation" method="POST" class="p-4 clearfix form-validation" >
+
+    <div class="row">
+        <div class="col-12">
+            <h4>Submit Enquiry</h4>
+            <p>Please provide as much information as possible. Don't forget to include your phone number and/or email address if you'd like to receive a reply.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="firstname">First Name</label>
+            <input required name="firstname" type="text" class="form-control" id="form-firstname" aria-describedby="" placeholder="e.g. John">
+            <div class="invalid-feedback">Please provide a first name</div>
+        </div>
+        <div class="form-group col-6">
+            <label for="lastname">Last Name</label>
+            <input required name="lastname" type="text" class="form-control" id="form-lastname" aria-describedby="" placeholder="e.g. Smith">
+            <div class="invalid-feedback">Please provide a last name</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6">
+            <label for="form-email">Email Address</label>
+            <input required name="email" type="email" class="form-control" id="form-email" aria-describedby="" placeholder="e.g. john@abcinc.com">
+            <div class="invalid-feedback">Please provide an email address</div>
+        </div>
+        <div class="form-group col-6">
+            <label for="form-phone">Phone Number</label>
+            <input type="text" name="phone" class="form-control" id="form-phone" aria-describedby="" placeholder="e.g. 805-555-5555">
+            <div class="invalid-feedback">Please provide a phone number</div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="form-group col-12">
+            <label for="form-comments">Comments</label>
+            <textarea required name="comment" class="form-control" id="form-comments" rows="5"></textarea>
+          </div>
+
+    </div>
+
+    <input type="hidden" name="geo_city" />
+    <input type="hidden" name="geo_region" />
+    <input type="hidden" name="geo_country" />
+    <input type="hidden" name="site_country" value="{{page.country_code}}" />
+
+    <button id="form-submit" type="submit" class="btn btn-md btn-primary float-right">Submit Enquiry</button>
+    <div class="clear"></div>
+
+</form>
+
+
+
+<script>
+
+(function() {
+  'use strict';
+    window.addEventListener('load', function() {
+        var forms = document.getElementsByClassName('form-validation');
+        var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+
+            if (!form.checkValidity()) {
+
+                event.preventDefault();
+                event.stopPropagation();
+
+            } else {
+
+                var email = document.querySelector("#form-email").value;
+
+                _cio.identify({
+                    id: email,
+                    email: email,
+                    created_at: Math.floor(Date.now()/1000),
+                    first_name: document.querySelector("#form-firstname").value,
+                    last_name: document.querySelector("#form-lastname").value,
+                    geo_city: city,
+                    geo_region: region,
+                    geo_country: country,
+                    phone: document.querySelector("#form-phone").value,
+                    site_country: "{{page.country_code}}".toUpperCase(),
+                    mixpanel_id: mixpanel ? mixpanel.get_distinct_id() : null
+                });
+
+                if (mixpanel) {
+                    mixpanel.identify();
+                    mixpanel.people.set({"$email": email});
+                }
+
+                _cio.track("contact_submit");
+            }
+
+
+            form.classList.add('was-validated');
+        }, false);
+        });
+    }, false);
+
+    var city, region, country;
+
+    $.get("https://ipinfo.io?token=8d569c1240a97f", function(response) {
+        city = document.querySelector("[name='geo_city']").value = response.city;
+        region = document.querySelector("[name='geo_region']").value = response.region;
+        country = document.querySelector("[name='geo_country']").value = response.country;
+
+    });
+
+})();
+</script>

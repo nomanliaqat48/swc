@@ -1,0 +1,32 @@
+{% capture count_words %}{{ post.content | number_of_words }}{% endcapture %}
+{% capture time_words %}{{count_words | divided_by: 5}}{% endcapture %}
+{% assign read_min = time_words | divided_by: 60 %}
+{% if read_min < 1 %}
+{% assign read_min = 1 %}
+{% endif %}
+
+
+
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <a class="article-card" href="{{ post.url | slice: 3, 999 }}">
+            <div class="card w-100 h-100 p-3 rounded-0">
+
+                <div class="row no-gutters h-100">
+                    <div class="col-12">
+                        <img src="{{ post.image }}" class="card-img-top mb-3" alt="{{ post.image_caption }}">
+
+                    </div>
+                    <div class="col-12 card-body px-0 pt-0 pb-0 mb-4">
+                        <div class="article-category">{{post.category}}</div>
+                        <h4 class="article-title mb-3">{{ post.title }}</h4>
+                        <p class="article-desc card-text mt-2">{{ post.content | strip_html | truncatewords: 30 }}</p>
+                    </div>
+                    <div class="col-12 card-footer pb-0 pt-1 d-flex align-content-end flex-wrap">
+                        <div class="date d-flex">{{ post.date | date_to_long_string }}</div>
+                        <div class="read d-flex ml-auto">{{read_min}} min read</div>
+                    </div>
+                </div>
+
+            </div>
+        </a>
+    </div>
